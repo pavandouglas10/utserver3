@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "sbuild": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node",
+        "config": {
+          "command": "npm run build:prod",
+          "outputDirectory": "."
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
