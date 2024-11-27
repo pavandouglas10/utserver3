@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "sbuild": [
+    "build": [
       {
         "src": "package.json",
         "use": "@vercel/node",
