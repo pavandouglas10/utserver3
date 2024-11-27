@@ -4,8 +4,11 @@
   "main": "index.js",
   "scripts": {
     "build:css": "npx tailwindcss -i ./input.css -o ./dist/output.css --watch",
+    "build:css:prod": "npx tailwindcss -i ./input.css -o ./dist/output.css --minify",
+    "build:prod": "npm run build:css:prod && echo 'Other production build tasks go here'",
     "serve": "serve ./",
-    "dev": "npm-run-all --parallel build:css serve"
+    "dev": "npm-run-all --parallel build:css serve",
+    "start": "npm run build:prod && npm run serve"
   },
   "keywords": [],
   "author": "Adair Rohling",
